@@ -70,6 +70,8 @@ a {
     display: flex;
     align-items: center;
     gap: 16px;
+    user-select: none;
+    cursor: pointer;
 }
 .dark {
     font-weight: 700;
@@ -86,6 +88,8 @@ a {
     align-items: center;
     gap: 16px;
     display: none;
+    user-select: none;
+    cursor: pointer;
 }
 .light {
     font-weight: 700;
