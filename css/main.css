@@ -1,0 +1,277 @@
+:root {
+    --white-bg-color: #F6F8FF;
+    --black-bg-color: #141D2F;
+
+    --white-block-color: #FEFEFE;
+    --black-block-color: #1E2A47;
+
+    --secret-color: #4B6A9B;
+    --primary-color: #4B6A9B;
+    --secondary-color: #0079FF;
+    --black-color: #2B3442;
+    --white-color: #fff;
+    --gray-color: #697C9A;
+
+    --site-logo-color: #222731;
+}
+
+
+/* space-mono-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/space-mono-v12-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/space-mono-v12-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+  /* space-mono-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/space-mono-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/space-mono-v12-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    padding: 144px 355px 170px;
+    background-color: var(--white-bg-color);
+    font-family: 'Space Mono';
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: var(--site-logo-color);
+    margin-bottom: 35px;
+}
+.dark-mode {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.dark {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 2.5px;
+    color: var(--gray-color);
+    text-transform: uppercase;
+}
+.light-mode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    display: none;
+}
+.light {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 2.5px;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+.sun {
+    display: none;
+}
+/* SEARCH */
+.search-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 69px;
+    border-radius: 15px;
+    background-color: var(--white-block-color);
+    padding: 23px 32px;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    margin-bottom: 24px;
+}
+.search-icon {
+    margin-right: 27px;
+}
+.search-placeholder {
+    font-size: 12px;
+    line-height: 25px;
+    color: var(--primary-color);
+    margin-right: 400px;
+}
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 24px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    border-radius: 10px;
+}
+.search-button:hover {
+    opacity: 0.7;
+}
+.input-wrapper {
+    display: flex;
+}
+
+/* USER INFO */
+.user-info {
+    display: flex;
+    gap: 37px;
+    width: 100%;
+    height: 419px;
+    background: var(--white-block-color);
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
+    padding: 44px 48px 52px;
+}
+.user {
+    width: 100%;
+}
+.user-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+.name {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: var(--black-color);
+}
+.last-join {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+    color: var(--gray-color);
+}
+.user-avatar {
+    border-radius: 50%;
+}
+.user-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;  
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.bio {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #4B6A9B;
+    opacity: 0.75;
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+.user-accaunt-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 85px;
+    border-radius: 10px;
+    background-color: var(--white-bg-color);
+    padding: 15px 32px;
+    margin-bottom: 37px;
+}
+.block-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #4B6A9B;
+}
+.block-number {
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--black-color);
+}
+.followers-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #4B6A9B;
+}
+.followers-number {
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--black-color);
+}
+.following-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #4B6A9B;
+}
+.following-number {
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--black-color);
+}
+/* LINKS */
+.links {
+    display: flex;
+    align-items: center;
+    gap: 62px;
+}
+.left-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.link-icon path {
+    fill: var(--secret-color);
+}
+.twitter-icon  {
+ opacity: 0.5;
+}
+.link-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--secret-color);
+}
+.twitter-text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--secret-color);
+    opacity: 0.5;
+}
