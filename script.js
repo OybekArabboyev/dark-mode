@@ -43,7 +43,7 @@ darkMode.addEventListener("click", ()=>{
         followingTitle.style.color = "#FFFFFF"
         followingNumber.style.color = "#FFFFFF"
         darkMode.style.display = "none"
-        lightMode.style.display = "block"
+        lightMode.style.display = "flex"
         
 })
 lightMode.addEventListener("click", ()=> {
@@ -65,6 +65,6 @@ lightMode.addEventListener("click", ()=> {
     followersTitle.style.color = "#4B6A9B"
     followingTitle.style.color = "#4B6A9B"
     followingNumber.style.color = "#2B3442"
-    darkMode.style.display = "block"
+    darkMode.style.display = "flex"
     lightMode.style.display = "none"
 })
